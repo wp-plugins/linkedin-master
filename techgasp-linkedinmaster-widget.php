@@ -12,7 +12,7 @@ class techgasp_linkedinmaster_widget extends WP_Widget {
 	function techgasp_linkedinmaster_widget() {
 	$widget_ops = array( 'classname' => 'LinkedIn Master', 'description' => __('LinkedIn Master, if you are serious about your linkedin connections and want to integrate your personal or company linkedin page into your wordpress. ', 'LinkedIn Master') );
 	$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'techgasp_linkedinmaster_widget' );
-	$this->WP_Widget( 'techgasp_linkedinmaster_widget', __('LinkedIn Master', 'Instagram master'), $widget_ops, $control_ops );
+	$this->WP_Widget( 'techgasp_linkedinmaster_widget', __('LinkedIn Master', 'linkedin master'), $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
