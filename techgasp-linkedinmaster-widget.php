@@ -19,7 +19,7 @@ class techgasp_linkedinmaster_widget extends WP_Widget {
 		extract( $args );
 		//Our variables from the widget settings.
 		$name = "LinkedIn Master";
-		$title = isset( $instance['show_linkedinbutton'] ) ? $instance['show_linkedinbutton'] :false;
+		$title = isset( $instance['title'] ) ? $instance['title'] :false;
 		$show_linkedinbutton = isset( $instance['show_linkedinbutton'] ) ? $instance['show_linkedinbutton'] :false;
 		echo $before_widget;
 		
