@@ -2,7 +2,7 @@
 /**
 Plugin Name: LinkedIn Master
 Plugin URI: http://wordpress.techgasp.com/linkedin-master/
-Version: 2.2
+Version: 2.3
 Author: TechGasp
 Author URI: http://wordpress.techgasp.com
 Text Domain: linkedin-master
