@@ -2,7 +2,7 @@
 /**
 Plugin Name: LinkedIn Master
 Plugin URI: http://wordpress.techgasp.com/linkedin-master/
-Version: 2.4
+Version: 2.5
 Author: TechGasp
 Author URI: http://wordpress.techgasp.com
 Text Domain: linkedin-master
@@ -37,8 +37,9 @@ require_once('techgasp-linkedinmaster-widget.php');
 
 // HOOK INVITATION
 
-    class techgasp_linkedinmaster
-    {
+
+	class techgasp_linkedinmaster
+	{
 		/** function/method
 		* Usage: return absolute file path
 		* Arg(1): string
@@ -84,15 +85,15 @@ require_once('techgasp-linkedinmaster-widget.php');
 			include(self::file_path('techgasp-linkedinmaster-admin.php'));
 		}
 		/** function/method
-                * Usage: show options/settings form page
-                * Arg(0): null
-                * Return: void
-                */
+		* Usage: show options/settings form page
+		* Arg(0): null
+		* Return: void
+		*/
 		 public static function techgasp_linkedinmaster_widget()
-                {
-                        // display widget page
-                        include(self::file_path('techgasp-linkedinmaster-widget.php'));
-                }
+				{
+				// display widget page
+				include(self::file_path('techgasp-linkedinmaster-widget.php'));
+				}
 		/** function/method
 		* Usage: filtering the content
 		* Arg(1): string
@@ -105,7 +106,7 @@ require_once('techgasp-linkedinmaster-widget.php');
 		}
 		
 		// Add settings link on plugin page
-		public function techgasp_linkedinmaster_link($links, $file) {
+		public static function techgasp_linkedinmaster_link($links, $file) {
 		static $this_plugin;
 		if (!$this_plugin) $this_plugin = plugin_basename(__FILE__);
 		if ($file == $this_plugin){
