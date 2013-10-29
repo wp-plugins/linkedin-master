@@ -2,8 +2,8 @@
 Contributors: Techgasp
 Tags: wordpress, techgasp, plugin, linkedin, linked-in, profile, badge, widget, linkedin share, linkedin button, industry, job
 Requires at least: 3.5
-Tested up to: 3.7
-Stable tag: 2.5
+Tested up to: 3.7.1
+Stable tag: 4.0
 License: GPLv2 or later
 
 LinkedIn Master, if you are serious about your linkedin connections and want to integrate your personal or company linkedin page into your wordpress.
@@ -19,32 +19,44 @@ In case you want to display both profiles, personal and company linked in profil
 
 Again and as usual with TechGasp extensions, the code is pristine, error free and with fast page loading times. Professional or business pages need to be fast to google rank better and to avoid website visits drop outs. If you are looking for a way to just display just the LinkedIn share button, then we recommend you the Social Master extension.
 
-ERROR CONFLICTS FREE - NO USE OF JAVASCRPT OR AJAX
-
 **Business class LinkedIn company or personal profile for wordpress...**
 
+ERROR CONFLICTS FREE - NO USE OF JAVASCRPT OR AJAX
 
 **LITE Version Contains:**
 
 * Option to Display or Hide the Widget Title
 * LinkedIn Website Share Button
 
-
 **ADVANCED Version Contains:**
-
-[Advanced Version Link](http://wordpress.techgasp.com/linkedin-master/)
 
 * Option to Display or Hide the Widget Title
 * LinkedIn Website Share Button
 * LinkedIn Company Profile View
-* LinkedIn Presonal Profile View
+* LinkedIn Personal Profile View
+* Shortcode Framework v2. Insert LinkedIn inside pages and posts
+* [Advanced Version Link](http://wordpress.techgasp.com/linkedin-master/)
+
+**ONLINE DEMO**
+
+* Right of the page, sidebar widget
+* Inside the post, with shortcode framework v2
+* [Demo Link](http://wordpress.techgasp.com/linkedin-master)
+
+**More High Quality Plugins?**
+
+* For professional wordpress websites
+* Tested for fast page load times and SEO
+* Errors and conflicts free. NO JAVASCRIPT or AJAX
+* [Click Here](http://wordpress.techgasp.com/buy-all-techgasp-wordpress-plugins/)
 
 
 == Installation ==
 
-1. Upload everything into the "/wp-content/plugins/" directory of your WordPress site.
+1. Use the Wordpress Installer, Updater.
 2. Activate in the "Plugins" admin panel.
 3. Visit the "Widget Page | LinkedIn Master" to configure the settings and your template widget position.
+4. [LinkedIn Master Documentation](http://wordpress.techgasp.com/linkedin-master-documentation/)
 
 
 == Frequently Asked Questions ==
@@ -52,21 +64,24 @@ ERROR CONFLICTS FREE - NO USE OF JAVASCRPT OR AJAX
 = Issues with buttons display =
 * Please update to latest version. Up-to-date API's are available
 
-= WHERE ARE MY LinkedIn Profiles? =
-* ADVANCED Version constains LinkedIn website Share Button plus the Display of LinkedIn Company and Personal Profiles.
-* [Advaced Version Link](http://wordpress.techgasp.com/linkedin-master/)
+= Where are my LinkedIn Profiles? =
+* Advanced Version contains LinkedIn website Share Button plus the Display of LinkedIn Company and Personal Profiles.
+* [Advanced Version Link](http://wordpress.techgasp.com/linkedin-master/)
 
-= Insert Widget in Pages or Posts =
-* ADVANCED Version constains the shortcode framework
-* Insert the code into the page or post. [linkedinmaster id=x]
-* "x" stands for your sidebar number, ie sidebar-1, final code would be:
-* [linkedinmaster id=sidebar-1]
-* [Advaced Version Link](http://wordpress.techgasp.com/linkedin-master/)
+= Where is Shortcode? =
+* Advanced Version contains all plugin options and the Shortcode Framework v2, publish widget inside pages and posts
+* [Advanced Version Link](http://wordpress.techgasp.com/linkedin-master/)
+* Insert the code into the page or post. [linkedin-master]
+
+= What's this Shortcode Framework v2 =
+* It's a framework developed by TechGasp and built upon wordpress marvellous resources.
+* Allows users to quickly and easily display plugins or widgets inside their pages and posts.
+* It's available in all TechGasp advanced version plugins. Lite versions plugins do not include shortcode framework v2.
+* [About Shortcode Framework v2](http://wordpress.techgasp.com/new-wordpress-framework-from-techgasp/)
 
 = Need More Help =
-* [ABOUT DOCUMENTATION](http://wordpress.techgasp.com)
-* [ABOUT INSTALLATION](http://wordpress.techgasp.com)
-* [SUPPORT](http://wordpress.techgasp.com/support)
+* [LinkedIn Master Documentation](http://wordpress.techgasp.com/linkedin-master-documentation)
+* [Support](http://wordpress.techgasp.com/support)
 
 
 == Screenshots ==
@@ -79,6 +94,12 @@ ERROR CONFLICTS FREE - NO USE OF JAVASCRPT OR AJAX
 
 
 == Changelog ==
+
+= 4.0 =
+* Implementing New Shortcode Framework v2. Shortcode box will now be available when editing a page or a post
+
+= 3.0 =
+* Implementing advanced updater
 
 = 2.5 =
 * Patching strict standards in WP_DEBUG mode
@@ -106,7 +127,6 @@ ERROR CONFLICTS FREE - NO USE OF JAVASCRPT OR AJAX
 * Adding Shortcode Framework, advanced version only
 * Fixing warnings and other stuff
 
-
 = 1.0 =
 * Alpha release
 * Adding Buttons
@@ -114,6 +134,9 @@ ERROR CONFLICTS FREE - NO USE OF JAVASCRPT OR AJAX
 
 
 == Upgrade Notice ==
+
+= 4.0 =
+* IMPORTANT Upgrade to new TechGasp Plugin Framework
 
 = 2.0 =
 * IMPORTANT Upgrade to Stable release
