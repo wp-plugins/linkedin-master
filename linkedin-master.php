@@ -2,7 +2,7 @@
 /**
 Plugin Name: LinkedIn Master
 Plugin URI: http://wordpress.techgasp.com/linkedin-master/
-Version: 4.0
+Version: 4.0.1
 Author: TechGasp
 Author URI: http://wordpress.techgasp.com
 Text Domain: linkedin-master
@@ -34,22 +34,13 @@ define('LINKEDIN_MASTER_ID', 'linkedin-master');
 define('LINKEDIN_MASTER_NICK', 'Linkedin Master');
 
 // HOOK WIDGET
-require_once('includes/linkedin-master-widget.php');
+require_once( dirname( __FILE__ ) . '/includes/linkedin-master-widget.php');
 
 // HOOK INVITATION
 
 // HOOK SHORTCODE
 
 	class linkedin_master{
-		/** function/method
-		* Usage: return absolute file path
-		* Arg(1): string
-		* Return: string
-		*/
-		public static function file_path($file)
-		{
-			return ABSPATH.'wp-content/plugins/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)).$file;
-		}
 		/** function/method
 		* Usage: hooking the plugin options/settings
 		* Arg(0): null
@@ -83,7 +74,7 @@ require_once('includes/linkedin-master-widget.php');
 			}
 			$plugin_id = LINKEDIN_MASTER_ID;
 			// display options page
-			include(self::file_path('includes/linkedin-master-admin.php'));
+			include( dirname( __FILE__ ) . '/includes/linkedin-master-admin.php');
 		}
 		/** function/method
 		* Usage: show options/settings form page
@@ -93,7 +84,7 @@ require_once('includes/linkedin-master-widget.php');
 		 public static function linkedin_master_widget()
 		{
 			// display widget page
-			include(self::file_path('includes/linkedin-master-widget.php'));
+			include( dirname( __FILE__ ) . '/includes/linkedin-master-widget.php');
 		}
 		/** function/method
 		* Usage: filtering the content
@@ -121,7 +112,6 @@ require_once('includes/linkedin-master-widget.php');
 		{
 		add_action('admin_init', array('linkedin_master', 'linkedin_master_register'));
 		add_action('admin_menu', array('linkedin_master', 'menu'));
-		
 		}
 	add_filter('the_content', array('linkedin_master', 'content_with_quote'));
 endif;
