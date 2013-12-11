@@ -3,7 +3,7 @@ Contributors: Techgasp
 Tags: wordpress, techgasp, plugin, linkedin, linked-in, profile, badge, widget, linkedin share, linkedin button, industry, job
 Requires at least: 3.5
 Tested up to: 3.7.1
-Stable tag: 4.0.1
+Stable tag: 4.0.2
 License: GPLv2 or later
 
 LinkedIn Master, if you are serious about your linkedin connections and want to integrate your personal or company linkedin page into your wordpress.
@@ -94,6 +94,9 @@ ERROR CONFLICTS FREE - NO USE OF JAVASCRPT OR AJAX
 
 
 == Changelog ==
+
+= 4.0.2 =
+* Faster Background Updater
 
 = 4.0.1 =
 * Changing directory calls to support Multi-Domains wordpress installations
