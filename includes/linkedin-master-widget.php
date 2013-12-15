@@ -48,6 +48,7 @@ class linkedin_master_widget extends WP_Widget {
 	$defaults = array( 'name' => __('LinkedIn Master', 'linkedin_master'), 'title' => true, 'show_linkedinbutton' => false, 'show_linkedinprofile' => false, 'show_linkedinhorizontal' => false, 'personalcode' => false, 'companycode' => false );
 	$instance = wp_parse_args( (array) $instance, $defaults );
 	?>
+		<br>
 		<b>Check the buttons to be displayed:</b>
 	<p>
 	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; width:16px; vertical-align:middle;" />
@@ -92,19 +93,28 @@ class linkedin_master_widget extends WP_Widget {
 	<div class="description">Only available in advanced version.</div>
 	<br>
 <div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
-		<p>
-		<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; width:16px; vertical-align:middle;" />
-		&nbsp;
-		<b>Linkedin Master Website</b>
-		</p>
-		<p><a class="button-secondary" href="http://wordpress.techgasp.com/linkedin-master/" target="_blank" title="Linkedin Master Info Page">Info Page</a> <a class="button-secondary" href="http://wordpress.techgasp.com/linkedin-master-documentation/" target="_blank" title="Linkedin Master Documentation">Documentation</a> <a class="button-primary" href="http://wordpress.techgasp.com/linkedin-master/" target="_blank" title="Linkedin Master">Advanced Version</a></p>
+	<p>
+	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; width:16px; vertical-align:middle;" />
+	&nbsp;
+	<b>Shortcode Framework</b>
+	</p>
+	<div class="description">The shortcode framework allows you to insert LinkedIn Master inside Pages & Posts without the need of extra plugins or gimmicks. Fast page load times and top SEO. Only available in advanced version.</div>
+	<br>
 <div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
-		<p>
-		<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; width:16px; vertical-align:middle;" />
-		&nbsp;
-		<b>Advanced Version Updater:</b>
-		</p>
-		<div class="description">The advanced version updater allows to automatically update your advanced plugin. Only available in advanced version.</div>
+	<p>
+	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; width:16px; vertical-align:middle;" />
+	&nbsp;
+	<b>Linkedin Master Website</b>
+	</p>
+	<p><a class="button-secondary" href="http://wordpress.techgasp.com/linkedin-master/" target="_blank" title="Linkedin Master Info Page">Info Page</a> <a class="button-secondary" href="http://wordpress.techgasp.com/linkedin-master-documentation/" target="_blank" title="Linkedin Master Documentation">Documentation</a> <a class="button-primary" href="http://wordpress.techgasp.com/linkedin-master/" target="_blank" title="Linkedin Master">Adv. Version</a></p>
+<div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
+	<p>
+	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; width:16px; vertical-align:middle;" />
+	&nbsp;
+	<b>Advanced Version Updater:</b>
+	</p>
+	<div class="description">The advanced version updater allows to automatically update your advanced plugin. Only available in advanced version.</div>
+	<br>
 	<?php
 	}
  }
