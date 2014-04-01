@@ -8,32 +8,6 @@ class linkedin_master_admin_shortcodes_table_un extends WP_List_Table {
 	 * @return string, echo the markup of the rows
 	 */
 	function display() {
-if ( $_POST) {
-if ( isset($_POST['linkedin_master_un_share_button']) )
-update_option('linkedin_master_un_share_button', $_POST['linkedin_master_un_share_button'] );
-else
-update_option('linkedin_master_un_share_button', 'false' );
-
-if ( isset($_POST['linkedin_master_un_profile']) )
-update_option('linkedin_master_un_profile', $_POST['linkedin_master_un_profile'] );
-else
-update_option('linkedin_master_un_profile', 'false' );
-
-if ( isset($_POST['linkedin_master_un_profile_code']) )
-update_option('linkedin_master_un_profile_code', $_POST['linkedin_master_un_profile_code'] );
-else
-update_option('linkedin_master_un_profile_code', 'false' );
-
-if ( isset($_POST['linkedin_master_un_align']) )
-update_option('linkedin_master_un_align', $_POST['linkedin_master_un_align'] );
-else
-update_option('linkedin_master_un_align', 'false' );
-?>
-<div id="message" class="updated fade">
-<p><strong><?php _e('Settings Saved!', 'linkedin_master'); ?></strong></p>
-</div>
-<?php
-}
 ?>
 <form method="post" width='1'>
 <fieldset class="options">
@@ -61,7 +35,7 @@ update_option('linkedin_master_un_align', 'false' );
 		<tr class="alternate">
 			<th class="check-column" scope="row"></th>
 			<td class="column-columnname" width="200">
-<p>Check the Add-ons Page</p>
+<p>Check Add-ons Page.</p>
 			</td>
 			<td class="column-columnname" width="200"></td>
 			<td class="column-columnname"></td>

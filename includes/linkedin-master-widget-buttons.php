@@ -19,7 +19,9 @@ class linkedin_master_widget_buttons extends WP_Widget {
 		$linkedin_title = isset( $instance['linkedin_title'] ) ? $instance['linkedin_title'] :false;
 		$linkedin_title_new = isset( $instance['linkedin_title_new'] ) ? $instance['linkedin_title_new'] :false;
 		$show_linkedinbutton_share = isset( $instance['show_linkedinbutton_share'] ) ? $instance['show_linkedinbutton_share'] :false;
+		$linkedinbutton_share_count = isset( $instance['linkedinbutton_share_count'] ) ? $instance['linkedinbutton_share_count'] :false;
 		$show_linkedinbutton_follow = isset( $instance['show_linkedinbutton_follow'] ) ? $instance['show_linkedinbutton_follow'] :false;
+		$linkedinbutton_follow_count = isset( $instance['linkedinbutton_follow_count'] ) ? $instance['linkedinbutton_follow_count'] :false;
 		$linkedinbutton_follow = $instance['linkedinbutton_follow'];
 		echo $before_widget;
 		
@@ -34,11 +36,17 @@ class linkedin_master_widget_buttons extends WP_Widget {
 	}
 //Display LinkedIn Share Website Button
 	if ( $show_linkedinbutton_share ){
+			if ( $linkedinbutton_share_count ){
+				$linkedinbutton_share_count_create = 'data-counter="right"';
+			}
+			else{
+				$linkedinbutton_share_count_create = '';
+			}
 		$show_linkedinbutton_share_create = '<div>' .
 											'<script src="//platform.linkedin.com/in.js" type="text/javascript">' .
 											'lang: en_US' .
 											'</script>' .
-											'<script type="IN/Share" data-counter="right"></script>' .
+											'<script type="IN/Share" '.$linkedinbutton_share_count_create.'></script>' .
 											'</div>';
 	}
 	else{
@@ -46,10 +54,16 @@ class linkedin_master_widget_buttons extends WP_Widget {
 	}
 //Display LinkedIn Share Website Button
 	if ( $show_linkedinbutton_follow ){
+					if ( $linkedinbutton_follow_count ){
+				$linkedinbutton_follow_count_create = 'data-counter="right"';
+			}
+			else{
+				$linkedinbutton_follow_count_create = '';
+			}
 		$show_linkedinbutton_follow_create = '<script src="//platform.linkedin.com/in.js" type="text/javascript">' .
 									'lang: en_US' .
 									'</script>' .
-									'&nbsp;&nbsp;<script type="IN/FollowCompany" data-id="'.$linkedinbutton_follow.'" data-counter="right"></script>';
+									'&nbsp;&nbsp;<script type="IN/FollowCompany" data-id="'.$linkedinbutton_follow.'" '.$linkedinbutton_follow_count_create.'"></script>';
 	}
 	else{
 		$show_linkedinbutton_follow_create = false;
@@ -66,13 +80,15 @@ class linkedin_master_widget_buttons extends WP_Widget {
 		$instance['linkedin_title'] = strip_tags( $new_instance['linkedin_title'] );
 		$instance['linkedin_title_new'] = $new_instance['linkedin_title_new'];
 		$instance['show_linkedinbutton_share'] = $new_instance['show_linkedinbutton_share'];
+		$instance['linkedinbutton_share_count'] = $new_instance['linkedinbutton_share_count'];
 		$instance['show_linkedinbutton_follow'] = $new_instance['show_linkedinbutton_follow'];
+		$instance['linkedinbutton_follow_count'] = $new_instance['linkedinbutton_follow_count'];
 		$instance['linkedinbutton_follow'] = $new_instance['linkedinbutton_follow'];
 		return $instance;
 	}
 	function form( $instance ) {
 	//Set up some default widget settings.
-	$defaults = array( 'linkedin_title_new' => __('LinkedIn Master', 'linkedin_master'), 'linkedin_title' => true, 'linkedin_title_new' => false, 'show_linkedinbutton_share' => false, 'show_linkedinbutton_follow' => false, 'linkedinbutton_follow' => false );
+	$defaults = array( 'linkedin_title_new' => __('LinkedIn Master', 'linkedin_master'), 'linkedin_title' => true, 'linkedin_title_new' => false, 'show_linkedinbutton_share' => false, 'linkedinbutton_share_count' => false, 'show_linkedinbutton_follow' => false, 'linkedinbutton_follow_count' => false, 'linkedinbutton_follow' => false );
 	$instance = wp_parse_args( (array) $instance, $defaults );
 	?>
 		<br>
@@ -95,6 +111,12 @@ class linkedin_master_widget_buttons extends WP_Widget {
 	<input type="checkbox" <?php checked( (bool) $instance['show_linkedinbutton_share'], true ); ?> id="<?php echo $this->get_field_id( 'show_linkedinbutton_share' ); ?>" name="<?php echo $this->get_field_name( 'show_linkedinbutton_share' ); ?>" />
 	<label for="<?php echo $this->get_field_id( 'show_linkedinbutton_share' ); ?>"><b><?php _e('LinkedIn Share Website Button', 'linkedin_master'); ?></b></label></br>
 	</p>
+	<p>
+	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; height:16px; vertical-align:middle;" />
+	&nbsp;
+	<input type="checkbox" <?php checked( (bool) $instance['linkedinbutton_share_count'], true ); ?> id="<?php echo $this->get_field_id( 'linkedinbutton_share_count' ); ?>" name="<?php echo $this->get_field_name( 'linkedinbutton_share_count' ); ?>" />
+	<label for="<?php echo $this->get_field_id( 'linkedinbutton_share_count' ); ?>"><b><?php _e('Activate Button Bubble Count', 'linkedin_master'); ?></b></label></br>
+	</p>
 <div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
 	<p>
 	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; height:16px; vertical-align:middle;" />
@@ -102,18 +124,25 @@ class linkedin_master_widget_buttons extends WP_Widget {
 	<input type="checkbox" <?php checked( (bool) $instance['show_linkedinbutton_follow'], true ); ?> id="<?php echo $this->get_field_id( 'show_linkedinbutton_follow' ); ?>" name="<?php echo $this->get_field_name( 'show_linkedinbutton_follow' ); ?>" />
 	<label for="<?php echo $this->get_field_id( 'show_linkedinbutton_follow' ); ?>"><b><?php _e('LinkedIn Follow Company', 'linkedin_master'); ?></b></label></br>
 	</p>
+	<p>
+	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; height:16px; vertical-align:middle;" />
+	&nbsp;
+	<input type="checkbox" <?php checked( (bool) $instance['linkedinbutton_follow_count'], true ); ?> id="<?php echo $this->get_field_id( 'linkedinbutton_follow_count' ); ?>" name="<?php echo $this->get_field_name( 'linkedinbutton_follow_count' ); ?>" />
+	<label for="<?php echo $this->get_field_id( 'linkedinbutton_follow_count' ); ?>"><b><?php _e('Activate Button Bubble Count', 'linkedin_master'); ?></b></label></br>
+	</p>
+	<p>
 	<label for="<?php echo $this->get_field_id( 'linkedinbutton_follow' ); ?>"><?php _e('LinkedIn Company Name:', 'linkedin_master'); ?></label></br>
 	<input id="<?php echo $this->get_field_id( 'linkedinbutton_follow' ); ?>" name="<?php echo $this->get_field_name( 'linkedinbutton_follow' ); ?>" value="<?php echo $instance['linkedinbutton_follow']; ?>" style="width:auto;" />
 	<div class="description"><a href="http://developer.linkedin.com/plugins/follow-company?button-type-count-right=true" target="_blank">LinkedIn Company Name Checker</a></div>
 	<div class="description">inside the Get Code copy the id number, i.e. <b>2822222</b></div>
-	<br>
+	</p>
 <div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
 	<p>
 	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; width:16px; vertical-align:middle;" />
 	&nbsp;
-	<b>Linkedin Master Website</b>
+	<b><?php echo get_option('linkedin_master_name'); ?> Website</b>
 	</p>
-	<p><a class="button-secondary" href="http://wordpress.techgasp.com/linkedin-master/" target="_blank" title="Linkedin Master Info Page">Info Page</a> <a class="button-secondary" href="http://wordpress.techgasp.com/linkedin-master-documentation/" target="_blank" title="Linkedin Master Documentation">Documentation</a> <a class="button-primary" href="http://wordpress.techgasp.com/linkedin-master/" target="_blank" title="Get Add-ons!">Get Add-ons!</a></p>
+	<p><a class="button-secondary" href="http://wordpress.techgasp.com/linkedin-master/" target="_blank" title="<?php echo get_option('linkedin_master_name'); ?> Info Page">Info Page</a> <a class="button-secondary" href="http://wordpress.techgasp.com/linkedin-master-documentation/" target="_blank" title="<?php echo get_option('linkedin_master_name'); ?> Documentation">Documentation</a> <a class="button-primary" href="http://wordpress.techgasp.com/linkedin-master/" target="_blank" title="Visit Website">Get Add-ons</a></p>
 	<?php
 	}
  }
