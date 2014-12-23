@@ -2,7 +2,7 @@
 Contributors: Techgasp
 Tags: wordpress, techgasp, plugin, linkedin, linked-in, profile, badge, widget, linkedin share, linkedin button, industry, job
 Requires at least: 3.5
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: 4.3.6
 License: GPLv2 or later
 
