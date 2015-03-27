@@ -2,8 +2,8 @@
 Contributors: Techgasp
 Tags: wordpress, techgasp, plugin, linkedin, linked-in, profile, badge, widget, linkedin share, linkedin button, industry, job
 Requires at least: 3.5
-Tested up to: 4.1
-Stable tag: 4.3.6
+Tested up to: 4.1.1
+Stable tag: 4.4.1.4
 License: GPLv2 or later
 
 LinkedIn Master, if you are serious about your linkedin connections and want to integrate your personal or company linkedin page into your wordpress.
@@ -35,7 +35,8 @@ ERROR CONFLICTS FREE - NO USE OF JAVASCRPT OR AJAX
 * Linkedin Member Profile Widget and Full Member Profile
 * Linkedin Company Profile Widget
 * Linkedin Company Insider Widget
-* Linkedin Apply Job Widget
+* Linkedin Available Jobs Widget
+* linkedin Alumni Widget
 
 * TechGasp Shortcode Framework v3:
 * Universal Shortcode for all pages and posts, same Shortcode applies to all pages and posts. Option to Automatically add the shortcode to all pages and posts or manually add the pre-built shortcode individually per page or post. Option to automatically only show the shortcode in Posts and not Pages. Option to Automatically show the shortcode After the Title or After the Content.
@@ -93,14 +94,40 @@ ERROR CONFLICTS FREE - NO USE OF JAVASCRPT OR AJAX
 
 == Screenshots ==
 
-1. Widget with LinkedIn Personal Profile and LinkedIn Website Share Button.
-2. Widget with LinkedIn Personal Profile, LinkedIn Company Profile and LinkedIn Website Share Button. Vertical Display.
-3. Widget with LinkedIn Personal Profile, LinkedIn Company Profile and LinkedIn Website Share Button. Horizontal Display.
-4. Widget with LinkedIn Personal Profile showing connections, without LinkedIn Website Share Button.
-5. Widget inside pages and posts. Shortcode framework implementation.
+1. Widget with LinkedIn Master Personal Profile and LinkedIn Website Share Button.
+2. Widget with LinkedIn Master Personal Profile, LinkedIn Company Profile and LinkedIn Website Share Button. Vertical Display.
+3. Widget with LinkedIn Master Personal Profile, LinkedIn Company Profile and LinkedIn Website Share Button. Horizontal Display.
+4. Widget with LinkedIn Master Personal Profile showing connections, without LinkedIn Website Share Button.
+5. Widget LinkedIn Master Available Jobs.
+6. Widget LinkedIn Master Alumni.
+7. Widget inside pages and posts. Shortcode framework implementation.
 
 
 == Changelog ==
+
+= 4.4.1.4 =
+* Getting all widget titles network ready
+* Adding LinkedIn Master Available Jobs Widget
+* Adding LinkedIn Master Alumni Widget
+
+= 4.4.1.3 =
+* Tweaking Updater
+
+= 4.4.1.2 =
+* Adding Network Warnings and help texts
+
+= 4.4.1.1 =
+* Fixing uninstall, plugin deletion on wordpress network and multi-sites
+
+= 4.4.1.0 =
+* Fixing Shortcodes
+* Fixing Widgets
+* General clean-up and speed boost
+
+= 4.4.0 =
+* Wordpress multi-site or wordpress network ready
+* New screenshots and images
+* LinkedIn Button tweaked
 
 = 4.3.6 =
 * Added automatic deletion of site_transients

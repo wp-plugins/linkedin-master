@@ -19,8 +19,8 @@ class linkedin_master_admin_widgets_table extends WP_List_Table {
 
 	<tfoot>
 		<tr>
-			<th class="manage-column column-columnname" scope="col" width="300"><a class="button-primary" href="/wp-admin/widgets.php" title="To Widgets Page" style="float:left;">To Widgets Page</a></p></th>
-			<th class="manage-column column-columnname" scope="col"><a class="button-primary" href="/wp-admin/widgets.php" title="To Widgets Page" style="float:right;">To Widgets Page</a></p></th>
+			<th class="manage-column column-columnname" scope="col" width="300"><a class="button-primary" href="<?php echo get_site_url(); ?>/wp-admin/widgets.php" title="To Widgets Page" style="float:left;">To Widgets Page</a></p></th>
+			<th class="manage-column column-columnname" scope="col"><a class="button-primary" href="<?php echo get_site_url(); ?>/wp-admin/widgets.php" title="To Widgets Page" style="float:right;">To Widgets Page</a></p></th>
 		</tr>
 	</tfoot>
 
@@ -35,15 +35,19 @@ class linkedin_master_admin_widgets_table extends WP_List_Table {
 		</tr>
 		<tr class="alternate">
 			<td class="column-columnname" width="300" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-linkedinmaster-admin-widget-profile-company.png', __FILE__); ?>" alt="<?php echo get_option('linkedin_master_name'); ?>" align="left" width="300px" height="135px" style="padding:5px;"/></td>
-			<td class="column-columnname"style="vertical-align:middle"><h3>Company Profile Widget</h3><p>The LinkedIn Master Company Profile, allows you to display your linkedin company profile and was specially designed to encapsulate the linkedin script for fast page loading times and good Google SEO.</p><p>Navigate to your wordpress widgets page and start using it.</p></td>
+			<td class="column-columnname"style="vertical-align:middle"><h3>Company Profile Widget</h3><p>The LinkedIn Master Company Profile, allows you to display your linkedin company profile and was specially designed to encapsulate the linkedin script for fast page loading times and good Google SEO.</p><p>Check Add-ons page.</p></td>
 		</tr>
 <tr>
 			<td class="column-columnname" width="300" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-linkedinmaster-admin-widget-company-insider.png', __FILE__); ?>" alt="<?php echo get_option('linkedin_master_name'); ?>" align="left" width="300px" height="135px" style="padding:5px;"/></td>
-			<td class="column-columnname"style="vertical-align:middle"><h3>Company Insider Widget</h3><p>The LinkedIn Master Company Insider, allows to enhance your content and show rich personalized insights about companies featured on your site and was specially designed to encapsulate the linkedin script for fast page loading times and good Google SEO.</p><p>Navigate to your wordpress widgets page and start using it.</p></td>
+			<td class="column-columnname"style="vertical-align:middle"><h3>Company Insider Widget</h3><p>The LinkedIn Master Company Insider, allows to enhance your content and show rich personalized insights about companies featured on your site and was specially designed to encapsulate the linkedin script for fast page loading times and good Google SEO.</p><p>Check Add-ons page.</p></td>
 		</tr>
 		<tr class="alternate">
-			<td class="column-columnname" width="300" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-linkedinmaster-admin-widget-apply-job.png', __FILE__); ?>" alt="<?php echo get_option('linkedin_master_name'); ?>" align="left" width="300px" height="135px" style="padding:5px;"/></td>
-			<td class="column-columnname"style="vertical-align:middle"><h3>Apply Job Widget</h3><p>The LinkedIn Master Apply Job allows for candidates to apply for your jobs using their LinkedIn profiles and was specially designed to encapsulate the linkedin script for fast page loading times and good Google SEO.</p><p>Navigate to your wordpress widgets page and start using it.</p></td>
+			<td class="column-columnname" width="300" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-linkedinmaster-admin-widget-jobs.png', __FILE__); ?>" alt="<?php echo get_option('linkedin_master_name'); ?>" align="left" width="300px" height="135px" style="padding:5px;"/></td>
+			<td class="column-columnname"style="vertical-align:middle"><h3>Available Jobs Widget</h3><p>The LinkedIn Master Available Jobs allows for candidates to apply for your jobs using their LinkedIn profiles and was specially designed to encapsulate the linkedin script for fast page loading times and good Google SEO.</p><p>Check Add-ons page.</p></td>
+		</tr>
+		<tr>
+			<td class="column-columnname" width="300" style="vertical-align:middle"><img src="<?php echo plugins_url('../images/techgasp-linkedinmaster-admin-widget-alumni.png', __FILE__); ?>" alt="<?php echo get_option('linkedin_master_name'); ?>" align="left" width="300px" height="135px" style="padding:5px;"/></td>
+			<td class="column-columnname"style="vertical-align:middle"><h3>Alumni Tool Widget</h3><p>LinkedIn Master Alumni, page provides high-level insights about alumni of your school, as well as access to the more detailed professional profiles they have shared.</p><p>Check Add-ons page.</p></td>
 		</tr>
 	</tbody>
 </table>

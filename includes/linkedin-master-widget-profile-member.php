@@ -8,7 +8,7 @@ register_widget( 'linkedin_master_widget_profile_member' );
 
 class linkedin_master_widget_profile_member extends WP_Widget {
 	function linkedin_master_widget_profile_member() {
-	$widget_ops = array( 'classname' => 'LinkedIn Master Member Profile', 'description' => __('LinkedIn Master Member Profile, allows you to display your linkedin personal profile. ', 'LinkedIn Master Member Profile') );
+	$widget_ops = array( 'classname' => 'LinkedIn Master Member Profile', 'description' => __('LinkedIn Master Member Profile, allows you to display your linkedin personal profile.', 'LinkedIn Master Member Profile') );
 	$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'linkedin_master_widget_profile_member' );
 	$this->WP_Widget( 'linkedin_master_widget_profile_member', __('LinkedIn Master Member Profile', 'linkedin_master'), $widget_ops, $control_ops );
 	}
@@ -25,14 +25,23 @@ class linkedin_master_widget_profile_member extends WP_Widget {
 		// Display the widget title
 	if ( $linkedin_title ){
 		if (empty ($linkedin_title_new)){
-		$linkedin_title_new = "LinkedIn Master";
-		}
+			if(is_multisite()){
+			$linkedin_title_new = get_site_option('linkedin_master_name');
+			}
+			else{
+			$linkedin_title_new = get_option('linkedin_master_name');
+			}
 		echo $before_title . $linkedin_title_new . $after_title;
+		}
+		else{
+		echo $before_title . $linkedin_title_new . $after_title;
+		}
 	}
 	else{
 	}
+	//RENDER WIDGET
 	if ( $show_linkedinprofile ){
-		echo '<div>' .
+		echo '<div style="overflow:visible !important">' . 
 			$personalcode .
 			'</div>';
 	}
@@ -78,9 +87,8 @@ class linkedin_master_widget_profile_member extends WP_Widget {
 	<p>
 	<label for="<?php echo $this->get_field_id( 'personalcode' ); ?>"><?php _e('insert Personal Profile Code:', 'linkedin_master'); ?></label></br>
 	<textarea cols="35" rows="5" id="<?php echo $this->get_field_id( 'personalcode' ); ?>" name="<?php echo $this->get_field_name( 'personalcode' ); ?>" ><?php echo stripslashes ($instance['personalcode']); ?></textarea>
-	</p>
 	<div class="description"><a href="http://developer.linkedin.com/plugins/member-profile-plugin-generator?button-type-inline=true" target="_blank">LinkedIn Personal Profile Code Generator</a></div>
-	<br>
+	</p>
 <div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
 	<p>
 	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; width:16px; vertical-align:middle;" />

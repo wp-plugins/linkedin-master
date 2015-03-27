@@ -8,7 +8,7 @@ register_widget( 'linkedin_master_widget_buttons' );
 
 class linkedin_master_widget_buttons extends WP_Widget {
 	function linkedin_master_widget_buttons() {
-	$widget_ops = array( 'classname' => 'LinkedIn Master Buttons', 'description' => __('LinkedIn Master Buttons allows you to show the Share Page on LinkedIn or Follow Company on LinkedIn. ', 'LinkedIn Master Buttons') );
+	$widget_ops = array( 'classname' => 'LinkedIn Master Buttons', 'description' => __('LinkedIn Master Buttons allows you to show the Share Page on LinkedIn or Follow Company on LinkedIn.', 'LinkedIn Master Buttons') );
 	$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'linkedin_master_widget_buttons' );
 	$this->WP_Widget( 'linkedin_master_widget_buttons', __('LinkedIn Master Buttons', 'linkedin_master'), $widget_ops, $control_ops );
 	}
@@ -28,12 +28,21 @@ class linkedin_master_widget_buttons extends WP_Widget {
 // Display the widget title
 	if ( $linkedin_title ){
 		if (empty ($linkedin_title_new)){
-		$linkedin_title_new = "LinkedIn Master";
-		}
+			if(is_multisite()){
+			$linkedin_title_new = get_site_option('linkedin_master_name');
+			}
+			else{
+			$linkedin_title_new = get_option('linkedin_master_name');
+			}
 		echo $before_title . $linkedin_title_new . $after_title;
+		}
+		else{
+		echo $before_title . $linkedin_title_new . $after_title;
+		}
 	}
 	else{
 	}
+	//RENDER WIDGET
 //Display LinkedIn Share Website Button
 	if ( $show_linkedinbutton_share ){
 			if ( $linkedinbutton_share_count ){
@@ -42,7 +51,7 @@ class linkedin_master_widget_buttons extends WP_Widget {
 			else{
 				$linkedinbutton_share_count_create = '';
 			}
-		$show_linkedinbutton_share_create = '<div>' .
+		$show_linkedinbutton_share_create = '<div style="overflow:visible !important">' . 
 											'<script src="//platform.linkedin.com/in.js" type="text/javascript">' .
 											'lang: en_US' .
 											'</script>' .
