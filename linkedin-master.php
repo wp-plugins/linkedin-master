@@ -2,7 +2,7 @@
 /**
 Plugin Name: LinkedIn Master
 Plugin URI: http://wordpress.techgasp.com/linkedin-master/
-Version: 4.4.1.4
+Version: 4.4.1.5
 Author: TechGasp
 Author URI: http://wordpress.techgasp.com
 Text Domain: linkedin-master
@@ -32,9 +32,9 @@ define( 'LINKEDIN_MASTER_URL', plugin_dir_url( __FILE__ ) );
 ///////DEFINE ID//////
 define( 'LINKEDIN_MASTER_ID', 'linkedin-master');
 ///////DEFINE VERSION///////
-define( 'LINKEDIN_MASTER_VERSION', '4.4.1.4' );
+define( 'LINKEDIN_MASTER_VERSION', '4.4.1.5' );
 global $linkedin_master_version, $linkedin_master_name;
-$linkedin_master_version = "4.4.1.4"; //for other pages
+$linkedin_master_version = "4.4.1.5"; //for other pages
 $linkedin_master_name = "Linkedin Master"; //pretty name
 if( is_multisite() ) {
 update_site_option( 'linkedin_master_installed_version', $linkedin_master_version );
