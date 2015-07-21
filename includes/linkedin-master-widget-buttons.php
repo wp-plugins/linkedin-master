@@ -103,7 +103,7 @@ class linkedin_master_widget_buttons extends WP_Widget {
 		<br>
 		<b>Check the buttons to be displayed:</b>
 	<p>
-	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; height:16px; vertical-align:middle;" />
+	<img src="<?php echo plugins_url('images/techgasp-minilogo-16.png', dirname(__FILE__)); ?>" style="float:left; height:16px; vertical-align:middle;" />
 	&nbsp;
 	<input type="checkbox" <?php checked( (bool) $instance['linkedin_title'], true ); ?> id="<?php echo $this->get_field_id( 'linkedin_title' ); ?>" name="<?php echo $this->get_field_name( 'linkedin_title' ); ?>" />
 	<label for="<?php echo $this->get_field_id( 'linkedin_title' ); ?>"><b><?php _e('Display Widget Title', 'linkedin_master'); ?></b></label></br>
@@ -113,28 +113,28 @@ class linkedin_master_widget_buttons extends WP_Widget {
 	<br>
 	<input id="<?php echo $this->get_field_id( 'linkedin_title_new' ); ?>" name="<?php echo $this->get_field_name( 'linkedin_title_new' ); ?>" value="<?php echo $instance['linkedin_title_new']; ?>" style="width:auto;" />
 	</p>
-<div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
+<div style="background: url(<?php echo plugins_url('images/techgasp-hr.png', dirname(__FILE__)); ?>) repeat-x; height: 10px"></div>
 	<p>
-	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; height:16px; vertical-align:middle;" />
+	<img src="<?php echo plugins_url('images/techgasp-minilogo-16.png', dirname(__FILE__)); ?>" style="float:left; height:16px; vertical-align:middle;" />
 	&nbsp;
 	<input type="checkbox" <?php checked( (bool) $instance['show_linkedinbutton_share'], true ); ?> id="<?php echo $this->get_field_id( 'show_linkedinbutton_share' ); ?>" name="<?php echo $this->get_field_name( 'show_linkedinbutton_share' ); ?>" />
 	<label for="<?php echo $this->get_field_id( 'show_linkedinbutton_share' ); ?>"><b><?php _e('LinkedIn Share Website Button', 'linkedin_master'); ?></b></label></br>
 	</p>
 	<p>
-	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; height:16px; vertical-align:middle;" />
+	<img src="<?php echo plugins_url('images/techgasp-minilogo-16.png', dirname(__FILE__)); ?>" style="float:left; height:16px; vertical-align:middle;" />
 	&nbsp;
 	<input type="checkbox" <?php checked( (bool) $instance['linkedinbutton_share_count'], true ); ?> id="<?php echo $this->get_field_id( 'linkedinbutton_share_count' ); ?>" name="<?php echo $this->get_field_name( 'linkedinbutton_share_count' ); ?>" />
 	<label for="<?php echo $this->get_field_id( 'linkedinbutton_share_count' ); ?>"><b><?php _e('Activate Button Bubble Count', 'linkedin_master'); ?></b></label></br>
 	</p>
-<div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
+<div style="background: url(<?php echo plugins_url('images/techgasp-hr.png', dirname(__FILE__)); ?>) repeat-x; height: 10px"></div>
 	<p>
-	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; height:16px; vertical-align:middle;" />
+	<img src="<?php echo plugins_url('images/techgasp-minilogo-16.png', dirname(__FILE__)); ?>" style="float:left; height:16px; vertical-align:middle;" />
 	&nbsp;
 	<input type="checkbox" <?php checked( (bool) $instance['show_linkedinbutton_follow'], true ); ?> id="<?php echo $this->get_field_id( 'show_linkedinbutton_follow' ); ?>" name="<?php echo $this->get_field_name( 'show_linkedinbutton_follow' ); ?>" />
 	<label for="<?php echo $this->get_field_id( 'show_linkedinbutton_follow' ); ?>"><b><?php _e('LinkedIn Follow Company', 'linkedin_master'); ?></b></label></br>
 	</p>
 	<p>
-	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; height:16px; vertical-align:middle;" />
+	<img src="<?php echo plugins_url('images/techgasp-minilogo-16.png', dirname(__FILE__)); ?>" style="float:left; height:16px; vertical-align:middle;" />
 	&nbsp;
 	<input type="checkbox" <?php checked( (bool) $instance['linkedinbutton_follow_count'], true ); ?> id="<?php echo $this->get_field_id( 'linkedinbutton_follow_count' ); ?>" name="<?php echo $this->get_field_name( 'linkedinbutton_follow_count' ); ?>" />
 	<label for="<?php echo $this->get_field_id( 'linkedinbutton_follow_count' ); ?>"><b><?php _e('Activate Button Bubble Count', 'linkedin_master'); ?></b></label></br>
@@ -145,9 +145,9 @@ class linkedin_master_widget_buttons extends WP_Widget {
 	<div class="description"><a href="http://developer.linkedin.com/plugins/follow-company?button-type-count-right=true" target="_blank">LinkedIn Company Name Checker</a></div>
 	<div class="description">inside the Get Code copy the id number, i.e. <b>2822222</b></div>
 	</p>
-<div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
+<div style="background: url(<?php echo plugins_url('images/techgasp-hr.png', dirname(__FILE__)); ?>) repeat-x; height: 10px"></div>
 	<p>
-	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; width:16px; vertical-align:middle;" />
+	<img src="<?php echo plugins_url('images/techgasp-minilogo-16.png', dirname(__FILE__)); ?>" style="float:left; width:16px; vertical-align:middle;" />
 	&nbsp;
 	<b><?php echo get_option('linkedin_master_name'); ?> Website</b>
 	</p>

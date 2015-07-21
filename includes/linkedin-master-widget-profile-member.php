@@ -67,7 +67,7 @@ class linkedin_master_widget_profile_member extends WP_Widget {
 		<br>
 		<b>Check the buttons to be displayed:</b>
 	<p>
-	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; height:16px; vertical-align:middle;" />
+	<img src="<?php echo plugins_url('images/techgasp-minilogo-16.png', dirname(__FILE__)); ?>" style="float:left; height:16px; vertical-align:middle;" />
 	&nbsp;
 	<input type="checkbox" <?php checked( (bool) $instance['linkedin_title'], true ); ?> id="<?php echo $this->get_field_id( 'linkedin_title' ); ?>" name="<?php echo $this->get_field_name( 'linkedin_title' ); ?>" />
 	<label for="<?php echo $this->get_field_id( 'linkedin_title' ); ?>"><b><?php _e('Display Widget Title', 'linkedin_master'); ?></b></label></br>
@@ -77,9 +77,9 @@ class linkedin_master_widget_profile_member extends WP_Widget {
 	<br>
 	<input id="<?php echo $this->get_field_id( 'linkedin_title_new' ); ?>" name="<?php echo $this->get_field_name( 'linkedin_title_new' ); ?>" value="<?php echo $instance['linkedin_title_new']; ?>" style="width:auto;" />
 	</p>
-<div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
+<div style="background: url(<?php echo plugins_url('images/techgasp-hr.png', dirname(__FILE__)); ?>) repeat-x; height: 10px"></div>
 	<p>
-	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; height:16px; vertical-align:middle;" />
+	<img src="<?php echo plugins_url('images/techgasp-minilogo-16.png', dirname(__FILE__)); ?>" style="float:left; height:16px; vertical-align:middle;" />
 	&nbsp;
 	<input type="checkbox" <?php checked( (bool) $instance['show_linkedinprofile'], true ); ?> id="<?php echo $this->get_field_id( 'show_linkedinprofile' ); ?>" name="<?php echo $this->get_field_name( 'show_linkedinprofile' ); ?>" />
 	<label for="<?php echo $this->get_field_id( 'show_linkedinprofile' ); ?>"><b><?php _e('Show LinkedIn Profile', 'linkedin_master'); ?></b></label></br>
@@ -89,9 +89,9 @@ class linkedin_master_widget_profile_member extends WP_Widget {
 	<textarea cols="35" rows="5" id="<?php echo $this->get_field_id( 'personalcode' ); ?>" name="<?php echo $this->get_field_name( 'personalcode' ); ?>" ><?php echo stripslashes ($instance['personalcode']); ?></textarea>
 	<div class="description"><a href="http://developer.linkedin.com/plugins/member-profile-plugin-generator?button-type-inline=true" target="_blank">LinkedIn Personal Profile Code Generator</a></div>
 	</p>
-<div style="background: url(<?php echo plugins_url('../images/techgasp-hr.png', __FILE__); ?>) repeat-x; height: 10px"></div>
+<div style="background: url(<?php echo plugins_url('images/techgasp-hr.png', dirname(__FILE__)); ?>) repeat-x; height: 10px"></div>
 	<p>
-	<img src="<?php echo plugins_url('../images/techgasp-minilogo-16.png', __FILE__); ?>" style="float:left; width:16px; vertical-align:middle;" />
+	<img src="<?php echo plugins_url('images/techgasp-minilogo-16.png', dirname(__FILE__)); ?>" style="float:left; width:16px; vertical-align:middle;" />
 	&nbsp;
 	<b><?php echo get_option('linkedin_master_name'); ?> Website</b>
 	</p>
