@@ -10,7 +10,7 @@ class linkedin_master_widget_profile_member extends WP_Widget {
 	function linkedin_master_widget_profile_member() {
 	$widget_ops = array( 'classname' => 'LinkedIn Master Member Profile', 'description' => __('LinkedIn Master Member Profile, allows you to display your linkedin personal profile.', 'LinkedIn Master Member Profile') );
 	$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'linkedin_master_widget_profile_member' );
-	$this->WP_Widget( 'linkedin_master_widget_profile_member', __('LinkedIn Master Member Profile', 'linkedin_master'), $widget_ops, $control_ops );
+	parent::__construct( 'linkedin_master_widget_profile_member', __('LinkedIn Master Member Profile', 'linkedin_master'), $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {

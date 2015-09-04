@@ -10,7 +10,7 @@ class linkedin_master_widget_buttons extends WP_Widget {
 	function linkedin_master_widget_buttons() {
 	$widget_ops = array( 'classname' => 'LinkedIn Master Buttons', 'description' => __('LinkedIn Master Buttons allows you to show the Share Page on LinkedIn or Follow Company on LinkedIn.', 'LinkedIn Master Buttons') );
 	$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'linkedin_master_widget_buttons' );
-	$this->WP_Widget( 'linkedin_master_widget_buttons', __('LinkedIn Master Buttons', 'linkedin_master'), $widget_ops, $control_ops );
+	parent::__construct( 'linkedin_master_widget_buttons', __('LinkedIn Master Buttons', 'linkedin_master'), $widget_ops, $control_ops );
 	}
 	
 	function widget( $args, $instance ) {
